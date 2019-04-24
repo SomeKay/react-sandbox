@@ -1,8 +1,13 @@
+import { RouteComponentProps } from '@reach/router';
 import React from 'react';
 import Pokemon from './Pokemon';
+import { IPokemonModel } from './PokemonModel';
 
-class PokemonList extends React.Component {
-    state = {
+class PokemonList extends React.Component<RouteComponentProps> {
+    state: {
+        pokemon: IPokemonModel[];
+        loading: boolean;
+    } = {
         pokemon: [],
         loading: true,
     };
